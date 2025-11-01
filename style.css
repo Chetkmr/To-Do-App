@@ -100,3 +100,13 @@ ul li p{
     color: #248050;
 
 }
+
+footer p{
+     position: fixed; /* fixes the footer relative to the viewport */
+    bottom: 0;       /* positions it at the bottom */
+    left: 0;         /* align to the left */
+    width: 100%;     /* span the full width */
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+}
