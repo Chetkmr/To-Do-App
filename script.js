@@ -2,10 +2,9 @@ const inputbox = document.querySelector('#inputbox');
 const addbtn = document.querySelector('#addbtn');
 const todoList = document.querySelector('#todoList');
 
+let editableTodo = null;
 
-let editTodo = () => {
 
-}
 // add function
 const addTodo = () => {
     const inputText = inputbox.value.trim();
@@ -16,7 +15,7 @@ const addTodo = () => {
 
     //edit function // some bug is there it is not working
     if (addbtn.value === "Edit") {
-        editTodo.target.previousElementSibling.innerHTML = inputText;
+        editableTodo.target.previousElementSibling.innerHTML = inputText;
         addbtn.value = "Add";
         inputbox.value = "";
     }
@@ -60,6 +59,8 @@ const updateTodo = (e) => {
         inputbox.value = e.target.previousElementSibling.innerHTML;
         inputbox.focus();
         addbtn.value = "Edit";
+        editableTodo = e;
+
     }
 
 }
@@ -122,12 +123,12 @@ const deleteLocalTodo = (todo) => {
     let todoText = todo.children[0].innerHTML;
     // console.log(todoText.children[0].innerHTML); // todoText.children[0] this index is about in li>[0]p,[1]button,[2]button
     let todoIndex = todos.indexOf(todoText) //index of saved of tasks 
-    todos.splice(todoIndex,1);
+    todos.splice(todoIndex, 1);
     localStorage.setItem("todos", JSON.stringify(todos));
     // array function slice / splice
     console.log(todoIndex);
-    
-    
+
+
 }
 
 document.addEventListener('DOMContentLoaded', getLocalTodo); // DOMContentLoaded means when page is reloded
