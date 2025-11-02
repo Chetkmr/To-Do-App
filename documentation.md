@@ -87,15 +87,10 @@ The code relies on `editTodo.target` (undefined) → **not working**.
 
 ✅ Will be fixed in a later section.
 
-#### Current Code
+#### Problem Solved
 
-```js
-if (e.target.innerHTML === "Edit") {
-    inputbox.value = e.target.previousElementSibling.innerHTML;
-    inputbox.focus();
-    addbtn.value = "Edit";
-}
-```
+✅ This will be fixed on Version 2.0 
+
 
 ---
 
@@ -146,4 +141,9 @@ document.addEventListener('DOMContentLoaded', getLocalTodo);
 
 ---
 
-✅ **Next Section:** Fixing Edit Feature + Improving Data Structure 🎯
+✅ **Next Section:** Adding Dark mode 🎯
+
+
+
+
+
