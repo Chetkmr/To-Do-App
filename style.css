@@ -1,112 +1,158 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Tahoma, Geneva, Verdana, sans-serif;
+/* ---- GENERAL PAGE ---- */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f3e9d7;
+  font-family: Arial, sans-serif;
 }
 
-body{
-    background-color: #f5deb3;   
+/* ---- CONTAINER ---- */
+
+.container {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* ---- TITLE ---- */
+
+.input-container h1 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 25px;
+  color: #2b2521;
 }
 
-.input-container{
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-    padding: 20px;
+/* ---- INPUT SECTION ---- */
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
-.input-container input{
-    border: none;
-    outline: none;
-    padding: 12px;
-    margin-block: 12px;
-    border-radius: 10px;
-    font-size: 15px;
-
+#inputbox {
+  width: 100%;
+  max-width: 450px;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  outline: none;
+  background: white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
-.input-container input[type="text"]{
-    width: 70%;
+/* ---- ADD BUTTON ---- */
+
+#addbtn {
+  padding: 12px 25px;
+  background: #3a2f28;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.input-container input[type="button"]{
-    background-color: grey;
-    color: #fff;
-    font-weight: 700;
-    margin-left: 8px;
-    cursor: pointer;
+#addbtn:hover {
+  background: #54463d;
 }
 
-.input-container input[type="button"]:hover{
-    background-color: darkgoldenrod;
-}
+/* ---- LIST ---- */
 
-ul{
-    width: 300px;
-    max-width: 450px;
-    /* display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center; */
-}
-
-ul :hover{
-    background-color: #e8c69f;
-}
-
-ul li{
-    list-style-type: none;
-    cursor: pointer;
-    border: 0.159px solid #017ff0;
-    border-radius: 12px;
-    margin-block-end: 12px;
-    padding: 6px 12px;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-ul li p{
-    flex-grow: 1;
-    padding: 2px;
+.todoList {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
 
 }
 
-.btn{
-    border: none;
-    outline: none;
-    font-size: 16px;
-    background: none;
-    font-weight: 600;
-    cursor: pointer;
-    padding: 8px;
+/* ---- TASK CARD ---- */
+
+.todoList li {
+  background: white;
+  padding: 15px 20px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 5px solid #4c7cff;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease;
 }
 
-.deletebtn{
-    color: #c34040;
+
+.todoList li button {
+  padding: 6px 14px;
+  border: none;
+  font-size: 14px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 600;
 }
 
-.editbtn{
-    color: #248050;
-
+/* Edit button */
+.todoList li .edit-btn {
+  background: #d9f5e1;
+  color: #0a7a20;
 }
 
-footer p{
-     position: fixed; /* fixes the footer relative to the viewport */
-    bottom: 0;       /* positions it at the bottom */
-    left: 0;         /* align to the left */
-    width: 100%;     /* span the full width */
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 10px 0;
+.todoList li .edit-btn:hover {
+  background: #b9e8c8;
+}
+
+/* Remove button */
+.todoList li .delete-btn {
+  background: #f8d6d6;
+  color: #cc1919;
+}
+
+.todoList li .delete-btn:hover {
+  background: #f1b2b2;
+}
+
+
+.todoList li:hover {
+  transform: translateY(-3px);
+}
+
+/* ---- TASK TEXT ---- */
+
+.todoList li span {
+  flex: 1;
+  font-size: 17px;
+  color: #222;
+  margin-right: 15px;
+  word-wrap: break-word;
+}
+
+/* ---- BUTTONS ---- */
+
+.todoList li .edit-btn {
+  color: #0a7a20;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: 0.2s;
+}
+
+.todoList li .edit-btn:hover {
+  opacity: 0.6;
+}
+
+.todoList li .delete-btn {
+  color: #cc1919;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.todoList li .delete-btn:hover {
+  opacity: 0.6;
 }
