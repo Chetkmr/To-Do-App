@@ -1,0 +1,29 @@
+<!-- 
+DarkMode html 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./sroom.css">
+</head>
+
+<body>
+
+    <div class="btn">
+        <div class="btn_indicator">
+            <div class="btm_icon_container">
+                <i class="fa-solid fa-sun"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./sroom.js"></script>
+</body>
+
+</html> -->
+
+<!-- https://www.youtube.com/watch?v=Yy69xuYX-jE&list=PLMxec9nlD1X2ifPtxeu3Xm9nK1c4eBx2x&index=6  -->

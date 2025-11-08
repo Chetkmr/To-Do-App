@@ -11,41 +11,41 @@ body {
 /* --- NAVBAR --- */
 
 .navbar {
-  width: 100%;
-  background: #3A6D8C;
-  padding: 15px 0;
-  border-radius: 0 0 12px 12px;
+    width: 100%;
+    background: #3A6D8C;
+    padding: 15px 0;
+    border-radius: 0 0 12px 12px;
 }
 
 .navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 160px;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 160px;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar li {
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .navbar a {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
 }
 
 @media (max-width: 450px) {
-  .navbar ul {
+    .navbar ul{
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 70px;
     margin: 0;
     padding: 0;
-  }
+    }
 }
 
 
@@ -177,7 +177,6 @@ body {
 /* ---- BUTTONS ---- */
 
 .todoList li .edit-btn {
-  
   color: #0a7a20;
   font-weight: bold;
   cursor: pointer;

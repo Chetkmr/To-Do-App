@@ -1,3 +1,6 @@
+// this sample.js file dose not push to git and it is only for testing purpose.
+
+
 const inputbox = document.querySelector('#inputbox');
 const addbtn = document.querySelector('#addbtn');
 const todoList = document.querySelector('#todoList');
@@ -13,7 +16,7 @@ const addTodo = () => {
         return inputText;
     }
 
-    // edit function
+    //edit function // some bug is there it is not working
     if (addbtn.value === "Edit") {
         editableTodo.target.previousElementSibling.innerHTML = inputText;
         addbtn.value = "Add";
@@ -29,7 +32,7 @@ const addTodo = () => {
 
         // adding Edit butten
         const editBtn = document.createElement('button');
-        editBtn.classList.add('btn', 'editbtn')
+        editBtn.classList.add('btn', 'editbtn');
         editBtn.innerHTML = "Edit";
         li.appendChild(editBtn);
 
@@ -60,9 +63,14 @@ const updateTodo = (e) => {
         inputbox.focus();
         addbtn.value = "Edit";
         editableTodo = e;
-
     }
 
+    // if (e.target.innerHTML === "Edit") {
+    //     editableTodo = e.target.parentElement;
+    //     inputbox.value = editableTodo.children[0].innerHTML;
+    //     addbtn.value = "Update";
+    //     inputbox.focus();
+    // }
 }
 
 // saving todos into localStorage
@@ -134,5 +142,3 @@ const deleteLocalTodo = (todo) => {
 document.addEventListener('DOMContentLoaded', getLocalTodo); // DOMContentLoaded means when page is reloded
 addbtn.addEventListener('click', addTodo);
 todoList.addEventListener('click', updateTodo);
-
-
